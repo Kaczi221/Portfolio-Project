@@ -1,0 +1,75 @@
+.main-about {
+    height: 90%;
+    background:rgb(41, 39, 39);
+    padding: 1% 10%;
+    @include flexCenter(column, center);
+    h1{
+        font-size: map-get($text-size, very-big);
+        color:$primary-text-color;
+        font-family: $header-font;
+        margin-bottom: 0px;
+    }
+    .about-container{
+        height: 45%;
+        @include flexCenter(row, center);
+        .my-img {
+            width: 50%;
+            @include flexCenter(column, center);
+            img{
+                height: 350px;
+                width: 270px;
+                border:solid 2px $primary-text-color;
+            }
+        }
+        .description-container{
+            width: 50%;
+            p{
+                color: $basic-text-color;
+                font-family: $regular-font;
+                font-size: map-get($text-size, medium);
+            }
+        }
+    }
+    .timeline-container {
+        height: 45%;
+        width: 100%;
+        @include flexCenter(row, center);
+        p {
+            color: $basic-text-color;
+            font-size: map-get($text-size, medium);
+            font-family: $regular-font;
+            margin:0 10px;
+        }
+        .timeline {
+            width: 100%;
+            @include flexCenter(column, center);
+            .upper-timeline {
+                width: 80%;
+                @include flexCenter(row, space-between);
+                .timeline-upper-line {
+                    height: 60px;
+                    width: 20px;
+                    border-left: solid 3px $primary-text-color;
+                    border-top: solid 3px $primary-text-color;
+                }
+            }
+            .middle-timeline {
+                height: 5px;
+                border-radius: 1px;
+                width: 100%;
+                background: $primary-text-color;
+            }
+            .bottom-timeline{
+                width: 100%;
+                @include flexCenter(row, space-evenly);
+                .timeline-bottom-line {
+                    height: 60px;
+                    width: 20px;
+                    margin:0 10px;
+                    border-right: solid 3px $primary-text-color;
+                    border-bottom: solid 3px $primary-text-color;
+                }
+            }
+        }
+    }
+}

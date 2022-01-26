@@ -30,16 +30,18 @@ body {
         font-family: $header-font;
         font-style: italic;
     }
-    button {
-        border: none;
-        background:white;
-        font-family:$regular-font;
-        font-size: map-get($text-size, medium);
-        border-radius: 2rem;
-        padding: 0.7rem 0.9rem;
-        margin-top: 10px;
-        color: $primary-text-color;
-        font-weight: 500;
-        cursor: pointer;
-    }
+    
+        button {
+            border: solid 1px $primary-text-color;
+            background:rgba(255, 255, 255, 0.363);
+            backdrop-filter: blur(5px);
+            font-family:$regular-font;
+            font-size: map-get($text-size, medium);
+            padding: 0.7rem 0.9rem;
+            margin-top: 10px;
+            color: $primary-text-color;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    
 }
