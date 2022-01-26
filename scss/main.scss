@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@import 'variables';
+@import 'header';
+@import 'contact';
+@import 'about';
+@import 'portfolio';
+@import 'stack';
+
+body {
+    height: 100vh;
+}
+.main-home {
+    height: 90%;
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/laptop.png');
+    background-size: cover;
+    background-position: center;
+    @include flexCenter(column, center);
+    h1 {
+        color: $primary-text-color;
+        font-size: map-get($text-size, very-big);
+        font-family: $header-font;
+    }
+    h2 {
+        color:$secondary-text-color;
+        font-size: map-get($text-size, medium);
+        font-family: $header-font;
+        font-style: italic;
+    }
+    button {
+        border: none;
+        background:white;
+        font-family:$regular-font;
+        font-size: map-get($text-size, medium);
+        border-radius: 2rem;
+        padding: 0.7rem 0.9rem;
+        margin-top: 10px;
+        color: $primary-text-color;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}

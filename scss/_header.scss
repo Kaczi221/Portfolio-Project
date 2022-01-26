@@ -1,0 +1,45 @@
+header {
+    @include flexCenter(row, space-between);
+    height: 10%;
+    padding: 10px 3rem;
+    font-family: 'Ubuntu', sans-serif;
+    img {
+        height: 50px;
+        width: 50px;
+    }
+    nav {
+        ul {
+        @include flexCenter(row, center);
+
+        list-style: none;
+            li {
+                margin: 0 10px;
+                color: $primary-text-color;
+                font-size: map-get($text-size, medium);
+                font-family: $regular-font;
+                transition: all 0.3s;
+                &:hover {
+                    transform: scale(1.2);
+                }
+                a{
+                    color: $primary-text-color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    button {
+        border:none;
+        font-size: map-get($text-size, medium);
+        background:$primary-text-color;
+        border-radius: 30px;
+        padding: 0.5rem 0.7rem;
+        color: $basic-text-color;
+        font-family: $regular-font;
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            background:rgb(206, 72, 206);
+        }
+    }
+}
