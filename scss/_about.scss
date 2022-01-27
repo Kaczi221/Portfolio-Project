@@ -1,6 +1,6 @@
 .main-about {
     height: 90%;
-    background:rgb(41, 39, 39);
+    background:$background-color;
     padding: 1% 10%;
     @include flexCenter(column, center);
     h1{
@@ -46,12 +46,42 @@
             .upper-timeline {
                 width: 80%;
                 @include flexCenter(row, space-between);
-                .timeline-upper-line {
+                .time{
+                    @include flexCenter(row, space-between);
+                    width: 240px;
                     height: 60px;
-                    width: 20px;
-                    border-left: solid 3px $primary-text-color;
-                    border-top: solid 3px $primary-text-color;
+                    .timeline-upper-line {
+                        height: 60px;
+                        width: 20px;
+                        border-left: solid 3px $primary-text-color;
+                        border-top: solid 3px $primary-text-color;
+                    }
+                    .programming-time-top {
+                        @include flexCenter(column, center);
+                        margin-top: -60px;
+                        width: 200px;
+                        height: 80px;
+                        background: rgb(65, 65, 65);
+                        padding: 0.3rem;
+                        border: solid 2px $primary-text-color;
+                        h1{
+                            color:$primary-text-color;
+                            font-family: $header-font;
+                            font-size: map-get($text-size, regular);
+                        }
+                        h2{
+                            color:$secondary-text-color;
+                            font-family: $header-font;
+                            font-size: map-get($text-size, regular );
+                        }
+                        p {
+                            color: $basic-text-color;
+                            font-family: $regular-font;
+                            font-size: map-get($text-size, regular);
+                        }
+                    }
                 }
+                
             }
             .middle-timeline {
                 height: 5px;
@@ -62,12 +92,41 @@
             .bottom-timeline{
                 width: 100%;
                 @include flexCenter(row, space-evenly);
-                .timeline-bottom-line {
+                .time{
+                    @include flexCenter(row, space-between);
+                    width: 240px;
                     height: 60px;
-                    width: 20px;
-                    margin:0 10px;
-                    border-right: solid 3px $primary-text-color;
-                    border-bottom: solid 3px $primary-text-color;
+                    .timeline-bottom-line {
+                        height: 60px;
+                        width: 20px;
+                        margin:0 10px;
+                        border-right: solid 3px $primary-text-color;
+                        border-bottom: solid 3px $primary-text-color;
+                    }
+                    .programming-time-bottom {
+                        @include flexCenter(column, center);
+                        margin-bottom: -60px;
+                        width: 200px;
+                        height: 80px;
+                        background: rgb(65, 65, 65);
+                        padding: 0.3rem;
+                        border: solid 2px $primary-text-color;
+                        h1{
+                            color:$primary-text-color;
+                            font-family: $header-font;
+                            font-size: map-get($text-size, regular);
+                        }
+                        h2{
+                            color:$secondary-text-color;
+                            font-family: $header-font;
+                            font-size: map-get($text-size, regular );
+                        }
+                        p {
+                            color: $basic-text-color;
+                            font-family: $regular-font;
+                            font-size: map-get($text-size, regular);
+                        }
+                    }
                 }
             }
         }
